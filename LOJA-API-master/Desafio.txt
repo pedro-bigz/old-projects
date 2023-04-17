@@ -1,0 +1,33 @@
+Backend:
+
+	Criar uma api para gerenciamento de um produto.
+
+	Campos:
+	Cod Produto
+	Nome produto
+	Valor Produto
+	Estoque
+	Cidade (Chave estrangeira)
+
+	A partir desse cadastro um recurso REST para gerenciamento desse modelo com os seguintes métodos devem estar disponíveis:
+
+		GET /products - Lista todos os produtos - pronto
+		GET /products/{id} - Busca um produto por id - pronto
+		POST /products - Cria um novo produto - pronto
+		PUT /products/{id} - Edita um produto - pronto
+		DELETE /products/{id} - Deleta um produto - pronto
+		GET /cidades - Lista todas as cidades - pronto
+
+Front-end:
+
+	Agora que nossa api já está feita, precisamos fazer um front-end para conversar com essa api.
+	O proejto do frontend, podera ser feito com qualquer linguagem ou frameworks.
+
+	Frameworks como angularjs e vuejs serão um extra.
+
+	O projeto Backend devera ser feito em springboot(java) ou laravel(PHP) com o banco de dados mysql.
+
+
+Após o fim do projeto disponibilizar no github.
+
+A data limite de entrega do projeto será dia 23/09 as 14:00 Hrs

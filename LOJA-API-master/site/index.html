@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Desafio</title>
+	
+	<script src="https://kit.fontawesome.com/02fdba64a6.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/styles.css">
+
+	<script src="js/index.js"></script>
+
+</head>
+
+<body>
+
+	<div class="alert alert-success msg-success fixed-top" style="display: none;"></div>
+	<div class="alert alert-danger msg-error fixed-top" style="display: none;"></div>
+
+	<span class="open-menu pl-2 pr-2">&#9776;</span>
+
+	<div id="menu" class="sidenav bg-success text-white">
+		<a href="javascript:void(0)" class="close-menu text-white">&times;</a>
+		<a href="#" class="prods text-white">Produtos</a>
+		<a href="#" class="citys text-white">Cidades</a>
+	</div>
+	
+	<div class="container mt-5 mb-5 prods">
+		<h1 class="display-4 text-center">Produtos</h1>
+		<div class="container pb-5 mb-5">
+
+			<div class="float-left search-container">
+				<div>
+					<input type="text" class="search" placeholder="Digite o id do produto"
+						style="border: none!important; height: 40px!important;" />
+					<button type="button" class="search">Procurar</button>
+				</div>
+			</div>
+
+			<div class="float-right">
+				<button class="btn btn-primary" data-toggle="modal" data-target="#cadastrar_produto">Adicionar Produto</button>
+			</div>
+
+		</div>
+
+		<button class="btn btn-secondary show-all-prods" style="display: none;">Mostrar todos</button>
+
+		<div class="container-fluid border-gray-1 mt-3">
+
+			<div class="table-responsive">
+				<table class="table table-prods">
+
+					<thead>
+						<tr>
+							<th><i class="fas fa-sort-amount-down-alt"></i> ID</th>
+							<th>Nome</th>
+							<th>Preço</th>
+							<th>Estoque</th>
+							<th>Cidade</th>
+							<th>Descrição</th>
+							<th></th>
+						</tr>
+					</thead>
+
+					<tbody class="table-content-prods"></tbody>
+
+				</table>
+			</div>
+
+			<div class="w-100 text-left ml-2 mb-2" id="products_info">
+				<p class="text-muted">Exibindo todos os produtos cadastrados</p>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="container mt-5 mb-5 citys" style="display: none;">
+
+		<h1 class="display-4 text-center">Cidades</h1>
+		<div class="container-fluid border-gray-1 mt-5">
+
+			<div class="table-responsive">
+				<table class="table table-citys">
+
+					<thead>
+						<tr>
+							<th><i class="fas fa-sort-amount-down-alt"></i> ID</th>
+							<th>Nome</th>
+							<th>UF</th>
+							<th>Nº de Habitantes</th>
+						</tr>
+					</thead>
+
+					<tbody class="table-content-citys"></tbody>
+
+				</table>
+			</div>
+
+			<div class="w-100 text-left ml-2 mb-2" id="citys_info">
+				<p class="text-muted">Exibindo todas as cidades cadastradas</p>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- The Modal -->
+	<div class="modal" id="cadastrar_produto">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Cadastro de produto</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+
+					<form class="cad-form">
+						<div class="form-group">
+							<label for="name">Nome:</label>
+							<input type="email" class="form-control input-register" id="name" placeholder="Nome do produto" name="name" required>
+						</div>
+
+						<div class="form-group">
+							<label for="price"></label>Preço:</label>
+							<input type="text" class="form-control input-register" id="price" placeholder="Valor do produto" name="price" required>
+						</div>
+
+						<div class="form-group">
+							<label for="amount"></label>Quantidade:</label>
+							<input type="number" class="form-control input-register" id="amount" placeholder="Quantidade em estoque" name="amount" required>
+						</div>
+
+						<div class="form-group">
+							<label for="amount"></label>Cidade:</label>
+							<!--<input type="text" class="form-control input-register" id="city" placeholder="Cidade em que se encontra" name="city" required>-->
+
+							<select class="form-control input-register" name="city" id="city" required>
+								
+							<select>
+						</div>
+
+						<div class="form-group">
+							<label for="description"></label>Descrição:
+							<textarea class="form-control input-register" name="description" id="description"
+								placeholder="Descrição"></textarea></label>
+						</div>
+						
+						<div class="alert alert-success cad-success" role="alert" style="display: none;"></div>
+						<div class="alert alert-danger cad-error" role="alert" style="display: none;"></div>
+
+						<button type="button" class="btn btn-primary register w-100">Cadastrar</button>
+					</form>
+
+				</div>
+
+				<!-- Modal footer -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger w-100" data-dismiss="modal">Cancelar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- The Modal -->
+	<div class="modal" id="editar_produto">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">produto</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+
+					<form class="edit-form">
+						
+						<input type="hidden" id="id" name="id">
+
+						<div class="form-group">
+							<label for="name">Nome:</label>
+							<input type="email" class="form-control input-edit" id="edit-name" placeholder="Nome do produto"
+								name="edit-name">
+						</div>
+
+						<div class="form-group">
+							<label for="price"></label>Preço:</label>
+							<input type="text" class="form-control input-edit" id="edit-price" placeholder="Valor do produto"
+								name="edit-price">
+						</div>
+
+						<div class="form-group">
+							<label for="amount"></label>Quantidade:</label>
+							<input type="number" class="form-control input-edit" id="edit-amount" placeholder="Quantidade em estoque"
+								name="edit-amount">
+						</div>
+
+						<div class="form-group">
+							<label for="edit-city"></label>Cidade:</label>
+							<!--<input type="number" class="form-control input-edit" id="edit-city" placeholder="Quantidade em estoque"
+								name="edit-amount">-->								
+
+							<select class="form-control input-edit" name="edit-city" id="edit-city" required>
+								
+							<select>
+						</div>
+
+						<div class="form-group">
+							<label for="description"></label>Descrição:
+							<textarea class="form-control input-edit" name="edit-description" id="edit-description"
+								placeholder="Descrição"></textarea></label>
+						</div>
+
+						<div class="alert alert-success edit-success" role="alert" style="display: none;"></div>
+						<div class="alert alert-danger edit-error" role="alert" style="display: none;"></div>
+
+						<button type="button" class="btn btn-primary w-100 update">Editar</button>
+					</form>
+
+				</div>
+
+				<!-- Modal footer -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger w-100" data-dismiss="modal">Cancelar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

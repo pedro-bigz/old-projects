@@ -1,0 +1,7 @@
+.page:not(.active) {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}

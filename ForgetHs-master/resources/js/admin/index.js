@@ -1,0 +1,14 @@
+import './admin-user';
+import './profile-edit-profile';
+import './profile-edit-password';
+import './loja-local';
+import './categoria';
+import './estoque';
+import './oferta';
+import './store';
+import './cliente';
+import './nivel-cliente';
+import './pedido';
+import './tipo-pagamento';
+import './store';
+import './redes-sociai';

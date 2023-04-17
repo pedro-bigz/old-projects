@@ -1,0 +1,33 @@
+.mobile_menu {
+    height: 150px;
+    background-color: whitesmoke;
+    box-shadow: 0px -3px 10px gray;
+    padding: 10px 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.mobile_menu-content {
+    width: 90%;
+}
+
+.menu_button {
+    background-color: inherit;
+    color: #23282c;
+    outline: 0;
+    border: 0;
+}
+
+.menu_button:active {
+    outline: 0;
+    border: 0;
+}
+
+.menu_button:hover {
+    outline: 0;
+    border: 0;
+}

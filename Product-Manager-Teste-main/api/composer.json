@@ -1,0 +1,17 @@
+{
+    "name": "Pedro",
+    "description": "API PHP OO",
+    "authors":[
+    	{
+    		"name": "Pedro.Paulo",
+    		"email": "pedropaulo.spaiva.a@gmail.com"
+    	}
+    ],
+    "autoload": {
+    	"psr-4": {
+    		"Core\\": "core",
+    		"Api\\": "app/api"
+    	}
+    },
+    "require": {}
+}

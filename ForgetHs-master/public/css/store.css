@@ -1,0 +1,29 @@
+.nav-sm-link {
+    font-family: 'Germania One';
+    font-size:1.25rem;
+}
+
+.nav-sm-link:hover {
+    transform: scale(1.25);
+}
+
+.nav-sm-link:active {
+    transform: scale(1);
+}
+
+.nav-sm-link:focus {
+    outline: 0;
+}
+
+header.nav-styles {
+    border-top: 3px solid black;
+}
+
+header.nav-styles > nav > ul > li{
+    padding-right: 15px;
+}
+
+.bg-dark-green {
+    background-color: rgba(0,0,0,0.6);
+    /* background-color: #085610; */
+}
